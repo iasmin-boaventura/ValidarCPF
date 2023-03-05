@@ -7,10 +7,13 @@ public class ex4 {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Digite o CPF: ");
         String cpfstr = sc.nextLine();
-        if(cpfstr.length() == 11 || !"11111111111".equals(cpfstr) || !"22222222222".equals(cpfstr)
-                || !"33333333333".equals(cpfstr)|| !"44444444444".equals(cpfstr)|| !"55555555555".equals(cpfstr)
-                || !"66666666666".equals(cpfstr)|| !"77777777777".equals(cpfstr)|| !"88888888888".equals(cpfstr)
-                || !"99999999999".equals(cpfstr)|| !"00000000000".equals(cpfstr));{
+        
+        //verifica se tem 11 digitos e numeros diferentes
+        if(cpfstr.length() == 11 && !"11111111111".equals(cpfstr) && !"22222222222".equals(cpfstr)
+                && !"33333333333".equals(cpfstr)&& !"44444444444".equals(cpfstr)&& !"55555555555".equals(cpfstr)
+                && !"66666666666".equals(cpfstr)&& !"77777777777".equals(cpfstr)&& !"88888888888".equals(cpfstr)
+                && !"99999999999".equals(cpfstr)&& !"00000000000".equals(cpfstr)){
+        
             //transforma o cpf recebido em string em um vetor int
             String[] numstr = cpfstr.split("");
             int cpf[] = new int[11];
@@ -60,6 +63,9 @@ public class ex4 {
             }else{
                 System.out.println("CPF inválido");
             }
+        }else{
+                System.out.println("CPF inválido");
         }
     }
+
 }
